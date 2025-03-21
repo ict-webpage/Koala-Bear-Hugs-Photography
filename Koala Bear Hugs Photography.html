@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koala Bear Hugs Photography</title>
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Capture, Cuddle, Cherish">
+    <meta name="author" content="Carmela A. Linsangan">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #fff;
+        }
+        header {
+            background-color: #ffcccc;
+            color: #fff;
+            padding: 15px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+  			height: 20px;
+  			background-color: #ffcccc;
+  			color: white;
+  			text-align: center;
+ 			position: fixed;
+  			width: 100%;
+  			bottom: 0;
+		}
+        .logo {
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            color: #333;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        header nav a:hover {
+            color: #ff758f;
+        }
+        .contact-btn {
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+        .contact-btn:hover {
+            background-color: #ff758f;
+        }
+        .hero {
+            background-image: url('https://scontent.fmnl8-5.fna.fbcdn.net/v/t39.30808-6/482319386_1117498000388987_4404053125208423592_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rp5ZewEcOMcQ7kNvgGRHqkO&_nc_oc=AdmlXrhnkQJz9BBIjLSSw_D5pkOIaXBaBKgYjbgzsD9Y8MSm0Dmr8BogliLDPmwxXpE&_nc_zt=23&_nc_ht=scontent.fmnl8-5.fna&_nc_gid=udscRvYZawon8ZOoJmFjfw&oh=00_AYHDDsCibXAlVklWlU8vFxP5t0ufeW3_HZA4fZDqf_hygQ&oe=67E1B6B3');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start; 
+            text-align: left;
+            position: relative;
+            color: #fff;
+            padding: 0 10%;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            position: relative;
+            z-index: 2;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            position: relative;
+            z-index: 2;
+            margin-top: 10px;
+        }
+        .hero .btn {
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: rgba(255,204,204,0.8);
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+        .hero .btn:hover {
+            background-color: #ff758f;
+        }
+        #about {
+            background-color: #fff;
+            padding: 100px 10%;
+            text-align: left; 
+        }
+        #about h3 {
+            color: #28a745;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        #about h2 {
+            font-size: 3rem;
+            color: #ffcccc;
+            font-weight: bold;
+            color: #000;
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 10px;
+        }
+        #about p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+            margin-top: 15px;
+            max-width: 70%;
+        }
+        #about a {
+            color: #000;
+            font-size: 1rem;
+            text-decoration: underline;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 30px;
+            }
+            .hero {
+                padding: 0 5%;
+            }
+            .hero h1 {
+                font-size: 4rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
+            .hero .btn {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+            header nav a {
+                margin: 0 10px;
+            }
+            #about {
+                padding: 50px 5%;
+            }
+            #about p {
+                max-width: 100%;
+            }
+         
+    </style>
+</head>
+<head>
+    ...
+    <style>
+        header nav a.active {
+            color: #ff758f;
+            border-bottom: 2px solid #ff758f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div style="display: flex; align-items: center;">
+    <h2>Koala Bear Hugs Photography</h2>
+</div>
+    <nav id="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact" class="contact-btn">Contact</a>
+    </nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+</header>
+
+<style>
+    .menu-toggle {
+        display: none;
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        padding: 15px;
+        box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+        width: 100%;  /* Make it take full width */
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        padding: 12px;
+        font-size: 18px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+}
+</style>
+
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById("navbar");
+        if (nav.style.display === "flex") {
+            nav.style.display = "none";
+        } else {
+            nav.style.display = "flex";
+        }
+    }
+</script>
+
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll("header nav a");
+
+            function changeActiveNav() {
+                let current = "";
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 120; 
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href").includes(current)) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", changeActiveNav);
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll("header nav a");
+
+            function changeActiveNav() {
+                let current = "";
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 120; 
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href").includes(current)) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", changeActiveNav);
+        });
+    </script>
+</body>
+
+       <section class="hero" id="home">
+	<h2>Capture the Cuddle: Koala Bear Hugs, Forever in Focus!</h2>
+        <h1>Koala Bear Hugs Photography</h1>
+        <button class="btn" onclick="location.href='#services'">Explore packages</button>
+    </section>
+
+    <section id="about" style="display: flex; align-items: center; gap: 40px;">
+    <div style="flex: 1;">
+        <h2 style="color: #ffb3b3;">Captured to Perfection</h2>
+        <p style="width: 100%;display: inline-block;padding: 25px;background-color: #ffd2c1;color: #fff;text-align: justify;box-sizing: border-box;height: auto;margin: 0 auto;">
+           Koala Bear Hugs Photography is all about capturing the warmth, joy, and beauty of every moment. Just like a koala’s comforting hug, we aim to make every photoshoot a cozy, welcoming experience, where you feel relaxed and confident in front of the camera. Whether it’s a family portrait, a special event, or a creative session, we specialize in turning fleeting moments into timeless memories. Our approach is personal, ensuring that each image reflects not just a picture, but an emotion. With a keen eye for detail and a passion for storytelling, Koala Bear Hugs Photography brings out the best in every person, place, and event—one hug-worthy shot at a time.
+        </p>
+        <br>
+        <a href="#contact" style="color:#ffb3b3;">Inquire now</a>
+    </div>
+</section>
+
+<section id="services" style="background-color: #fff9f9; padding: 100px 10%; text-align: left;">
+     <h3 style="color: #ffc0cb; font-size: 1rem;text-transform: uppercase; letter-spacing: 1px;">Our Services</h3>
+    <h2 style="font-size: 2em; color: #ffb3b3; font-family: 'Montserrat', sans-serif; margin-top: 10px;">Exlore Our Photography Services: Capturing Moments That Last a Lifetime</h2>
+
+<br>
+<br>
+			<h3 style="margin-top: 15px; font-size: 1.5rem; color:#ffc0cb;">Newborn</h3>
+            <p style="color: #ffcccc; font-size: 1rem;">Capture the sweetness and innocence of your baby’s early days, creating timeless, cherished memories.</p>
+            <img src="https://scontent.fmnl8-1.fna.fbcdn.net/v/t39.30808-6/485124552_1129094745895979_3973313893640715124_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lWgDkYy8sxwQ7kNvgHnFuB5&_nc_oc=AdnVyD_jxkvxhv2H8yjPRTvBhU79FjCigusd9RQ4VdEGGL_OaKCtOjU8iyKsrEDXvI8&_nc_zt=23&_nc_ht=scontent.fmnl8-1.fna&_nc_gid=HOWQ3mnFxdcOmNSeraLA4g&oh=00_AYEyqregNqFiLIwZIPlDnfPwlJ6zwEy2oFjGMM1CMAog0Q&oe=67E30A11" alt="image of a newborn" style="width: 100%; border-radius: 5px;">
+     
+<br>
+<br>
+            <h3 style="margin-top: 15px; font-size: 1.5rem; color:#ffc0cb;">Sitters</h3>
+            <p style="color: #ffcccc; font-size: 1rem;">Capture your baby’s joyful milestones as they sit up, showcasing their personality and innocence in beautiful, timeless photos.</p>
+            <img src="https://scontent.fmnl8-6.fna.fbcdn.net/v/t39.30808-6/476136685_1093407709464683_1559325244677574840_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=8NAHoUhnzMIQ7kNvgGQrpaf&_nc_oc=AdnWsFiiufu5v9nu58NE78FLPe_JqOk77ItsAcSJIbIHi8fU3PvUerxvC7KLLVrHJZM&_nc_zt=23&_nc_ht=scontent.fmnl8-6.fna&_nc_gid=qW6Z8xn8rkyth3V_ApEcpQ&oh=00_AYHy00Gd2fenkiquiYjVARhueNxQlb3fx6GFr6u4ki6Xrw&oe=67E2FC8A" alt="image of a baby sitting" style="width: 100%; border-radius: 5px;">
+   
+<br>
+<br>
+      		<h3 style="margin-top: 15px; font-size: 1.5rem; color:#ffc0cb;">Pre-Birthday</h3>
+            <p style="color: #ffcccc; font-size: 1rem;">Celebrate your little one’s excitement before their big day, capturing joyful moments and milestones leading up to the celebration.
+</p>
+            <img src="https://scontent.fmnl8-2.fna.fbcdn.net/v/t1.6435-9/155809218_1058768574633892_5619228205418126021_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=f727a1&_nc_ohc=x1yU-mqSz9YQ7kNvgEvByVt&_nc_oc=Adkf5Onb5Hhf2CR8dfHvImqdh8C29DZ2-yAEHsyJFXexeNxPvlplmQgp363r4z7exW0&_nc_zt=23&_nc_ht=scontent.fmnl8-2.fna&_nc_gid=felkgW4Oguvq1rdecMrjIw&oh=00_AYHJI_x3gAIImZassHedVOHSs2x_RYDk2mmU9mUuoLxdaA&oe=6804A2B3" alt="image of a baby and mom" style="width: 100%; border-radius: 5px;">
+            
+    
+<br> 
+<br>
+
+			<h3 style="margin-top: 15px; font-size: 1.5rem; color:#ffc0cb;">Family Session</h3>
+            <p style="color: #ffcccc; font-size: 1rem;">Capture the love, connection, and joy of your family, creating timeless memories to cherish for years.
+</p>
+            <img src="https://scontent.fmnl8-6.fna.fbcdn.net/v/t39.30808-6/482239285_1120880170050770_6366093054537621357_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=BwJ-wiP0gKwQ7kNvgESn-VM&_nc_oc=Adm_5iqpIzlECKLndFpZKcuT1iTQSUD4CGUyUSoF7sUg-BBIu3xIqV3_B21FJc8t1x4&_nc_zt=23&_nc_ht=scontent.fmnl8-6.fna&_nc_gid=pLHJOtRwoSteFZoMgQt83A&oh=00_AYHil7aU5OB9yDvX4ouWg0Okq_c8VtLWnUtxX_yOdzp8ZA&oe=67E3178E" alt="image of a family of 3" style="width: 100%; border-radius: 5px;">          
+
+<br>
+<br>
+			<h3 style="margin-top: 15px; font-size: 1.5rem; color:#ffc0cb;">Smash and Splash</h3>
+            <p style="color: #ffcccc; font-size: 1rem;">A fun, messy photoshoot where your little one celebrates their first birthday with a cake smash followed by a splash in the tub, creating playful and unforgettable memories.
+</p>          
+            <img src="https://scontent.fmnl8-4.fna.fbcdn.net/v/t1.6435-9/135872265_1023966824780734_7388847478300808695_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=x_Ykl2YlKEoQ7kNvgEtwpDo&_nc_oc=AdloSxxIuRHQTIWNdkAPkR-znohJsnZZy7qBbpMZqZ0-VZp9i6-B8LuBSjHsdwFbNjg&_nc_zt=23&_nc_ht=scontent.fmnl8-4.fna&_nc_gid=an68ITZeqLLSK8d7v1NFfw&oh=00_AYF00BClfn0KFmJw2NLE1GkIuen0kOOFmL2ideJY_pglmQ&oe=68049F46" alt="image of a baby in a bathtub" style="width: 100%; border-radius: 5px;">
+            
+            
+</section>
+
+<section id="reviews" style="background-color: #fff; padding: 100px 10%; text-align: left;">
+    <h1 style="color: #ffb3b3; font-size: 3rem;">What our clients say</h1>
+        
+    <div style="display: flex; justify-content: flex-start; gap: 30px; margin-top: 50px; flex-wrap: wrap;">
+        <div style="background: #ffcccc; padding: 20px; border-radius: 10px; width: 571.5px; text-align: left; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        
+			<p style="color:#ff758f; font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        	<p style="color: #fff; font-size: 1.5rem;text-align:left;"><b>Angeli Chua</b></p>
+            <p style="margin-top: 15px; font-size: 1.5rem;color:white;">Satisfied with the output and service. Highly recommended! One of the best photography in town for sure! Can’t wait for another photo sesh! </p>
+        </div>
+        
+         <div style="display: flex; justify-content: flex-start; gap: 30px; margin-top: 50px; flex-wrap: wrap;">
+        <div style="background: #ffcccc; padding: 20px; border-radius: 10px; width: 571.5px; text-align: left; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        
+			<p style="color:#ff758f; font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        	<p style="color: #fff; font-size: 1.5rem;text-align:left;"><b>Sam Talabis</b></p>
+            <p style="margin-top: 15px; font-size: 1.5rem;color:white;">Highly recommend! Very professional, kind and humble! Super bait kausap and mag eenjoy ka sa studio, no pressure kay baby sa pag take ng photos. Super safe and clean. I am very happy and satisfied with my son’s photos. Godbless you Ma’am Anne! </p>
+        </div>
+        
+         <div style="display: flex; justify-content: flex-start; gap: 30px; margin-top: 50px; flex-wrap: wrap;">
+        <div style="background: #ffcccc; padding: 20px; border-radius: 10px; width: 571.5px; text-align: left; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        
+			<p style="color:#ff758f; font-size: 20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        	<p style="color: #fff; font-size: 1.5rem;text-align:left;"><b>Aubs Angeli</b></p>
+            <p style="margin-top: 15px; font-size: 1.5rem;color:white;">Ms. Anne is very good with kids! from newborns to toddlers, she's amazing! thank you for taking beautiful shots of my daughter </p>
+        </div>
+
+</section>
+
+<section id="contact" style="background-color: #fff9f9; padding: 100px 10%; text-align: left;">
+    <h3 style="color: #ffc0cb; font-size: 1rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Contact Us</h3>
+    <h2 style="font-size: 3rem; font-weight: bold; color: #ffb3b3; font-family: 'Montserrat', sans-serif; margin-top: 10px;">Inquire Today for More Details</h2>
+    
+            <form action="https://formspree.io/f/xvgkgkje" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+                <label for="name" style="font-size: 1rem; font-weight: bold;">Name *</label>
+                <input type="text" id="name" name="name" placeholder="Jane Smith" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;">
+                
+                <label for="email" style="font-size: 1rem; font-weight: bold;">Email address *</label>
+                <input type="email" id="email" name="email" placeholder="email@website.com" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;">
+                
+                <label for="phone" style="font-size: 1rem; font-weight: bold;">Phone number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="555-555-5555" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;">
+                
+                <label for="message" style="font-size: 1rem; font-weight: bold;">Message</label>
+                <textarea id="message" name="message" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; height: 120px;"></textarea>
+                
+                <label style="display: flex; align-items: center; gap: 10px;">
+                    <input type="checkbox" name="consent" required>
+                    I consent to this website storing my submission in order to respond to my inquiry.
+ *
+                </label>
+
+                <button type="submit" style="background: #ffb3b3; color: white; padding: 12px; border: none; border-radius: 5px; font-size: 18px; cursor: pointer;">SUBMIT</button>
+            </form>
+            
+
+            <h2 style="margin-top: 15px; font-size: 1.5rem;">For More Information</h2>
+	    <h3 style="color: black; font-size: 1rem;">&#9743;+63 09619738379</h3>
+            <h3 style="color: black; font-size: 1rem;">✉ <a href="mailto:crmlalinsanganala@gmail.com" style="color: black; font-weight: bold;">crmlalinsanganala@gmail.com</a></h3>
+            <h3 style="color: black; font-size: 1rem;">𖠿 <a href="#" style="color: black; font-weight: bold;">67 Maharlika highway castellano (Big Gray Gate next to Luxury Jade Inn hotel), San Leonardo, Philippines, 3102</a></h3>
+            
+            
+</section>
+<footer>
+        <p>© 2025 - Koala Bear Hugs Photography. All Rights Reserved. || Author : Carmela A. Linsangan</p>
+</footer>
+
+</body>
+</html>
